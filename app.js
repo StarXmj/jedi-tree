@@ -156,21 +156,15 @@
 
   async function createDuo() {
 
-      return getCell("b").then((value) => {
+      return getCell("b").then(async(value) => {
           var name = value
-          return getCell("d").then((value) => {
-              var master = value
-              console.log(value);
-              return getCell("g").then((value) => {
-                  var padawan = value
-                  console.log(value);
-
-
-
-                  return [name, master, padawan]
-              });
-
-          });
+          const value_3 = await getCell("d");
+          var master = value_3;
+          console.log(value_3);
+          const value_5 = await getCell("g");
+          var padawan = value_5;
+          console.log(value_5);
+          return [name, master, padawan];
 
       });
 
