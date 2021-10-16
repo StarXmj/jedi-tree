@@ -175,18 +175,18 @@
           var liste3 = []
           var liste4 = []
 
-          for (var i = 0; i < name.length; i++) {
 
-              for (var j = 0; j < padawan[i].split(",").length - 1; j++) {
 
-                  liste3.push(padawan[i].split(',')[j])
+          for (var j = 0; j < padawan[0].split(",").length - 1; j++) {
 
-              }
-              liste4.push(liste3)
+              liste3.push(padawan[0].split(',')[j])
 
           }
 
-          console.log(liste4)
+
+
+
+          console.log(liste3)
 
 
 
