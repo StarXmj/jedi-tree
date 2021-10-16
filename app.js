@@ -183,10 +183,10 @@
 
 
           }
-          var f = []
+
           for (var j = 0; j < liste3.length; j++) {
               for (var m = 0; m < liste3[j].length; m++) {
-                  f.push([liste3[j][m], name[j]])
+                  liste.push([liste3[j][m], name[j]])
 
 
 
@@ -200,7 +200,7 @@
 
 
 
-          console.log(f)
+          console.log(liste)
 
 
 
