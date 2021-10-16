@@ -6,8 +6,6 @@
     <meta charset="utf-8" />
     <meta name="google-signin-client_id" content='147729448139-8tn66o3dkg1bnq2o3lka0n9qogf1m1v2.apps.googleusercontent.com'>
     <meta name="google-site-verification" content="_S8nOu1m29Be6xAcoEVw-3QT0hL6ChySbQic6G4o57M" />
-    <script src="js/panzoom.min.js"></script>
-
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 
@@ -20,58 +18,9 @@
 
         <pre id="content" style="white-space: pre-wrap;"></pre>
 
-        <div id="chart_div"></div>
-
-        <section id=i ntro>
-
-            <section class="img">
-                <h2 id="titled">Maps</h2> <br><br>
-                <div class="buttons">
-                    <button id="zoom-in">+</button>
-                    <button id="zoom-out">- </button>
-                    <button id="reset">Reset</button>
-                </div>
-                <div class="parent">
-                    <div class="panzoom" id="panzoom-element">
-                        <img class="maps" src="image/MAP_OF_WALLS_AOTV.png">
-                    </div>
-                </div>
-
-                <script>
-                    const elem = document.getElementById('panzoom-element');
-                    const zoomInButton = document.getElementById('zoom-in');
-                    const zoomOutButton = document.getElementById('zoom-out');
-                    const resetButton = document.getElementById('reset');
-                    const panzoom = Panzoom(elem);
-                    const parent = elem.parentElement
-                        // No function bind needed
-                    parent.addEventListener('wheel', panzoom.zoomWithWheel);
-                    zoomInButton.addEventListener('click', panzoom.zoomIn)
-                    zoomOutButton.addEventListener('click', panzoom.zoomOut)
-                    resetButton.addEventListener('click', panzoom.reset)
-                </script>
-            </section>
+        <img id="chart_div"></img>
 
 
-
-
-            <br><br><br><br><br><br>
-            <p class="text" style="color: brown;font-size: 12px;">This site is made by an amateur and is constantly changing if you have any accountability (some responsive beug) problem:<br> <a href='https://discord.gg/BNRa7Uj'>Click here</a></p>
-            <br><br><br><br><br><br>
-            <br>
-
-
-
-
-
-
-
-
-
-
-
-
-        </section>
 
         <script src="app.js"></script>
         <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">

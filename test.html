@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="panzoom.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .bloc {
+            background-color: red;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+
+    <canvas class="panzoom">
+      
+    </canvas>
+
+    <div class="bloc">
+    </div>
+    <script>
+        PanZoom(".panzoom", {
+
+            // min/max scale
+            minScale: 0.1,
+            maxScale: 5,
+
+            // increment step
+            increment: 0.05,
+
+            // whether to zoom linearly when using increment
+            liner: false
+
+        });
+    </script>
+
+</body>
+
+</html>
