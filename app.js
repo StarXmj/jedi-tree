@@ -166,7 +166,7 @@
           const value_5 = await getCell("g");
           var padawan = value_5;
           console.log(value_5);
-          liste = []
+          var liste = [];
 
           for (var k = 0; k < name.length; i++) {
               liste.push([name[k], master[k]])
