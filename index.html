@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Google Sheets API Quickstart</title>
+    <meta charset="utf-8" />
+    <meta name="google-signin-client_id" content='147729448139-8tn66o3dkg1bnq2o3lka0n9qogf1m1v2.apps.googleusercontent.com'>
+    <meta name="google-site-verification" content="_S8nOu1m29Be6xAcoEVw-3QT0hL6ChySbQic6G4o57M" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+    <body>
+        <p>Google Sheets API Quickstart</p>
+
+        <!--Add buttons to initiate auth sequence and sign out-->
+        <button id="authorize_button" style="display: none;">Authorize</button>
+        <button id="signout_button" style="display: none;">Sign Out</button>
+
+        <pre id="content" style="white-space: pre-wrap;"></pre>
+
+        <div id="chart_div"></div>
+        <img src="https://tr.rbxcdn.com/a78676ad941e83106acdfa269874848e/150/150/Avatar/Png" alt="">
+        <script src="app.js"></script>
+        <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
+        </script>
+    </body>
+
+</html>
