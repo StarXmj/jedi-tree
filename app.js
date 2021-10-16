@@ -180,7 +180,7 @@
               liste4.push(liste3)
               for (var j = 0; j < padawan[i].split(",").length - 1; j++) {
 
-                  liste3.push(padawan[i].split(',')[j])
+                  liste3 = padawan[i].split(',')[j]
 
               }
           }
