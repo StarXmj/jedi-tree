@@ -155,7 +155,7 @@
   }
 
   async function createDuo() {
-      console.log(createDuo())
+      console.log(getCell())
 
   }
 
