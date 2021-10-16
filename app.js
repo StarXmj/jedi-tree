@@ -176,7 +176,7 @@
           var liste4 = []
 
 
-          for (var i = 0; i < 8; i++) {
+          for (var i = 0; i < padawan.length; i++) {
               liste4.push(liste3)
               for (var j = 0; j < padawan[i].split(",").length - 1; j++) {
 
