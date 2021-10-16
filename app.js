@@ -172,12 +172,14 @@
               liste.push([name[k], master[k]])
 
           }
-
+          var liste2 = []
           for (var i = 0; i < name.length; i++) {
-              liste.push([padawan[i], name[i]])
-
+              for (var j = 0; j < padawan[i].split(",").length - 1; j++) {
+                  liste2.push([padawan[i].split(',')[j]])
+              }
           }
-          console.log(liste)
+
+          console.log(liste2)
 
 
 
