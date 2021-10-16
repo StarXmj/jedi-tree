@@ -160,6 +160,7 @@
 
       return getCell("b").then(async(value) => {
           var name = value
+          console.log(name)
           const value_3 = await getCell("d");
           var master = value_3;
           console.log(value_3);
