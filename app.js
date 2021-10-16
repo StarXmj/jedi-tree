@@ -164,6 +164,27 @@
           const value_5 = await getCell("g");
           var padawan = value_5;
           console.log(value_5);
+
+          google.charts.load('current', { packages: ["orgchart"] });
+          google.charts.setOnLoadCallback(drawChart);
+
+
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
+
+
+          // For each orgchart box, provide the name, manager, and tooltip to show.
+          data.addRows([
+
+              ['yyy', 'Jim'],
+              ['Carol', 'Bob']
+          ]);
+
+          // Create the chart.
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+          // Draw the chart, setting the allowHtml option to true for the tooltips.
+          chart.draw(data, { 'allowHtml': true });
           return [name, master, padawan];
 
       });
@@ -173,28 +194,8 @@
 
   }
 
-  google.charts.load('current', { packages: ["orgchart"] });
-  google.charts.setOnLoadCallback(drawChart);
+
 
   async function drawChart() {
-      createDuo().then((value) => {
-          console.log(value)
 
-      })
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Name');
-      data.addColumn('string', 'Manager');
-
-
-      // For each orgchart box, provide the name, manager, and tooltip to show.
-      data.addRows([
-
-          ['yyy', 'Jim'],
-          ['Carol', 'Bob']
-      ]);
-
-      // Create the chart.
-      var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
-      // Draw the chart, setting the allowHtml option to true for the tooltips.
-      chart.draw(data, { 'allowHtml': true });
   }
