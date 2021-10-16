@@ -108,7 +108,7 @@
           var numRows = result.values;
           var finale = parseInt(numRows[0][0]);
 
-          console.log((typeof finale) + " " + finale)
+          //console.log((typeof finale) + " " + finale)
           var nb = finale + 2;
           ranges = createRanges("b", nb)
 
@@ -141,7 +141,7 @@
               var resultf = result.valueRanges;
               listef = []
               for (var i = 0; i < resultf.length; i++) {
-                  console.log(i);
+                  // console.log(i);
                   listef.push(resultf[i]["values"][0][0])
 
 
@@ -155,7 +155,10 @@
   }
 
   async function createDuo() {
-      console.log(getCell())
+      return numberOfCell().then((value) => {
+          console.log(value);
+
+      });
 
   }
 
