@@ -127,7 +127,11 @@
 
   function createDuo() {
 
-      console.log(numberOfCell())
+
+      numberOfCell().then((value) => {
+          console.log(value);
+          // expected output: 123
+      });
 
       gapi.client.sheets.spreadsheets.values.batchGet({
           spreadsheetId: "1zuICXUxw2OiKN2q9JO76DoVCaSLMcyVs_gbLlewuEMo",
