@@ -155,6 +155,8 @@
   }
 
   async function createDuo() {
+      google.charts.load('current', { packages: ["orgchart"] });
+      google.charts.setOnLoadCallback(drawChart);
 
       return getCell("b").then(async(value) => {
           var name = value
@@ -165,8 +167,7 @@
           var padawan = value_5;
           console.log(value_5);
 
-          google.charts.load('current', { packages: ["orgchart"] });
-          google.charts.setOnLoadCallback(drawChart);
+
 
 
           var data = new google.visualization.DataTable();
