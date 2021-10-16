@@ -154,7 +154,7 @@
 
   }
 
-  function createDuo() {
+  async function createDuo() {
       console.log(createDuo())
 
   }
