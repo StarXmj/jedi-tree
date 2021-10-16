@@ -183,12 +183,24 @@
 
 
           }
+          var f = []
+          for (var j = 0; i < liste3.length; i++) {
+              for (var m = 0; m < liste3[i].length; m++) {
+                  f.push([liste3[i][0], name[i]])
 
 
 
 
 
-          console.log(liste3)
+
+              }
+          }
+
+
+
+
+
+          console.log(f)
 
 
 
