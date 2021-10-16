@@ -177,7 +177,10 @@
   google.charts.setOnLoadCallback(drawChart);
 
   async function drawChart() {
-      console.log(createDuo())
+      createDuo().then(async(value) => {
+          console.log(value)
+
+      })
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'Name');
       data.addColumn('string', 'Manager');
