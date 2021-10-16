@@ -176,17 +176,19 @@
           var liste4 = []
 
 
+          for (var i = 0; i < 8; i++) {
+              for (var j = 0; j < padawan[i].split(",").length - 1; j++) {
 
-          for (var j = 0; j < padawan[0].split(",").length - 1; j++) {
+                  liste3.push(padawan[i].split(',')[j])
 
-              liste3.push(padawan[0].split(',')[j])
-
+              }
           }
+          liste4 = push(liste3)
 
 
 
 
-          console.log(liste3)
+          console.log(liste4)
 
 
 
