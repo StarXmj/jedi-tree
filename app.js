@@ -165,7 +165,7 @@
                   var padawan = value
                   console.log(value);
                   liste = [name, master, padawan]
-                  console.log(liste)
+                  return liste
 
 
               });
@@ -182,6 +182,7 @@
   google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
+      console.log(createDuo())
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'Name');
       data.addColumn('string', 'Manager');
