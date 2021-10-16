@@ -99,7 +99,7 @@
   }
 
 
-  async function numberOfCell() {
+  async function numberOfCell(colonne) {
       return gapi.client.sheets.spreadsheets.values.get({
           spreadsheetId: "1zuICXUxw2OiKN2q9JO76DoVCaSLMcyVs_gbLlewuEMo",
           range: "q1"
@@ -110,7 +110,7 @@
 
           //console.log((typeof finale) + " " + finale)
           var nb = finale + 2;
-          ranges = createRanges("b", nb)
+          ranges = createRanges(colonne, nb)
 
           //for (var i = 2; i <= (go2() + 2); i++) {
           // ranges.push(i);
@@ -125,10 +125,10 @@
 
   }
 
-  async function getCell() {
+  async function getCell(colonne) {
 
 
-      return numberOfCell().then((value) => {
+      return numberOfCell(colonne).then((value) => {
           //console.log(value);
           // expected output: 123
 
@@ -155,7 +155,7 @@
   }
 
   async function createDuo() {
-      return getCell().then((value) => {
+      return getCell("b").then((value) => {
           console.log(value);
 
       });
