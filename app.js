@@ -185,7 +185,7 @@
           var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
           // Draw the chart, setting the allowHtml option to true for the tooltips.
           chart.draw(data, { 'allowHtml': true });
-          return [name, master, padawan];
+          //return [name, master, padawan];
 
       });
 
