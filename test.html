@@ -5,38 +5,218 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="panzoom.min.js"></script>
+    <script src="OrgChart.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <style>
-        .bloc {
-            background-color: red;
-            width: 300px;
-            height: 300px;
-        }
-    </style>
 
-    <canvas class="panzoom">
-      
-    </canvas>
-
-    <div class="bloc">
-    </div>
+    <div style="width:100%; height:700px;" id="orgchart" />
     <script>
-        PanZoom(".panzoom", {
+        function random(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+        const data = [
+            [
+                "AnimatedEcrux",
+                "pololemon"
+            ],
+            [
+                "Felixen8",
+                "GatoMorningStar"
+            ],
+            [
+                "Unite5000",
+                "JSC"
+            ],
+            [
+                "reyrosky",
+                "Blazey_Kitsune"
+            ],
+            [
+                "Eoldor",
+                "JamesEcrux"
+            ],
+            [
+                "Nuggetonio",
+                "Unite5000"
+            ],
+            [
+                "PhaseSpectr",
+                "CromNokseri"
+            ],
+            [
+                "ArchiveGreeterCannon",
+                "LidaMorningstar"
+            ],
+            [
+                "BookMaster77",
+                "JSC"
+            ],
+            [
+                "Kdakaka231",
+                "AnimatedEcrux"
+            ],
+            [
+                " FrivolousArch",
+                "AnimatedEcrux"
+            ],
+            [
+                " FrivolousAlamo",
+                "AnimatedEcrux"
+            ],
+            [
+                "HotrodZilla20",
+                "Felixen8"
+            ],
+            [
+                "MistfulGlee",
+                "Felixen8"
+            ],
+            [
+                "LyCranos",
+                "Felixen8"
+            ],
+            [
+                "HeavyOverjoyash1234",
+                "Felixen8"
+            ],
+            [
+                "bon20025",
+                "Felixen8"
+            ],
+            [
+                "Goldenfox70",
+                "Unite5000"
+            ],
+            [
+                "\nBLOOXXED",
+                "Unite5000"
+            ],
+            [
+                "\nToni598923",
+                "Unite5000"
+            ],
+            [
+                "\nVagtil",
+                "Unite5000"
+            ],
+            [
+                "\nGarriik",
+                "Unite5000"
+            ],
+            [
+                "\nVeIixy",
+                "Unite5000"
+            ],
+            [
+                "\nNuggetonio",
+                "Unite5000"
+            ],
+            [
+                "\nUsherblue7",
+                "Unite5000"
+            ],
+            [
+                "\nvJesko ",
+                "Unite5000"
+            ],
+            [
+                "\nJohn_Tailor",
+                "Unite5000"
+            ],
+            [
+                "\nMega_Pekka_1121",
+                "Unite5000"
+            ],
+            [
+                "\nkadimzx ",
+                "Unite5000"
+            ],
+            [
+                "\ndrFrostxl",
+                "Unite5000"
+            ],
+            [
+                "\nKing_DarkMarcosBR",
+                "Unite5000"
+            ],
+            [
+                "\nAntarctic_Gaming\n",
+                "Unite5000"
+            ],
+            [
+                "Foxtrot2332 ",
+                "reyrosky"
+            ],
+            [
+                " micaahh",
+                "reyrosky"
+            ],
+            [
+                "Anitaanil",
+                "Eoldor"
+            ],
+            [
+                " Harpelix",
+                "Eoldor"
+            ],
+            [
+                " Skaxon ",
+                "Eoldor"
+            ],
+            [
+                "ADAMOS_001 ",
+                "Nuggetonio"
+            ],
+            [
+                "Vulpology",
+                "PhaseSpectr"
+            ],
+            [
+                " Braydenbode ",
+                "PhaseSpectr"
+            ],
+            [
+                "OliverVulpes",
+                "PhaseSpectr"
+            ],
+            [
+                "GalacticLemonFTW ",
+                "PhaseSpectr"
+            ],
+            [
+                "ThreatHorizon",
+                "ArchiveGreeterCannon"
+            ],
+            [
+                "ioipoker ",
+                "BookMaster77"
+            ]
+        ]
+        var liste = []
+        var nb = 0
+        for (var i = 0; i < data.length; i++) {
 
-            // min/max scale
-            minScale: 0.1,
-            maxScale: 5,
+            for (var j = 1; j > 0; j--) {
+                liste.push({
+                    id: i,
+                    //pid: nb,
+                    name: data[i][j],
+                    img: 'http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=' + data[i][j]
+                })
 
-            // increment step
-            increment: 0.05,
 
-            // whether to zoom linearly when using increment
-            liner: false
-
+            }
+        }
+        console.log(liste)
+        var chart = new OrgChart(document.getElementById("orgchart"), {
+            nodeBinding: {
+                field_0: "name",
+                img_0: "img"
+                    // img_0: "img"
+            },
+            nodes: liste
         });
     </script>
 
