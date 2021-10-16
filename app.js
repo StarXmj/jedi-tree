@@ -173,6 +173,7 @@
 
           }
           var liste3 = []
+          var liste4 = []
 
           for (var i = 0; i < name.length; i++) {
 
@@ -181,10 +182,11 @@
                   liste3.push(padawan[i].split(',')[j])
 
               }
+              liste4.push(liste3)
 
           }
 
-          console.log(liste3)
+          console.log(liste4)
 
 
 
