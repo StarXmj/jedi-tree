@@ -177,14 +177,15 @@
           for (var i = 0; i < name.length; i++) {
 
               for (var j = 0; j < padawan[i].split(",").length - 1; j++) {
-                  var liste2 = []
-                  liste2.push([padawan[i].split(',')[j]])
-                  liste3.push(liste2)
+
+                  liste3.push(padawan[i].split(',')[j])
+
               }
 
           }
 
           console.log(liste3)
+
 
 
 
