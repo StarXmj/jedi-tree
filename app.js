@@ -173,8 +173,9 @@
 
           }
           var liste3 = []
-          var liste2 = []
+
           for (var i = 0; i < name.length; i++) {
+              var liste2 = []
               for (var j = 0; j < padawan[i].split(",").length - 1; j++) {
                   liste2.push([padawan[i].split(',')[j]])
                   liste3.push(liste2)
