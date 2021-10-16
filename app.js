@@ -125,31 +125,37 @@
 
   }
 
-  function createDuo() {
+  async function getCell() {
 
 
-      numberOfCell().then((value) => {
-          console.log(value);
+      return numberOfCell().then((value) => {
+          //console.log(value);
           // expected output: 123
+
+
+          return gapi.client.sheets.spreadsheets.values.batchGet({
+              spreadsheetId: "1zuICXUxw2OiKN2q9JO76DoVCaSLMcyVs_gbLlewuEMo",
+              ranges: value
+          }).then((response) => {
+              var result = response.result;
+              var resultf = result.valueRanges;
+              listef = []
+              for (var i = 0; i < resultf.length; i++) {
+                  console.log(i);
+                  listef.push(resultf[i]["values"][0][0])
+
+
+              }
+              // console.log(listef);
+
+              return listef
+          });
       });
 
-      gapi.client.sheets.spreadsheets.values.batchGet({
-          spreadsheetId: "1zuICXUxw2OiKN2q9JO76DoVCaSLMcyVs_gbLlewuEMo",
-          ranges: ['b2', 'b3', ]
-      }).then((response) => {
-          var result = response.result;
-          var resultf = result.valueRanges;
-          listef = []
-          for (var i = 0; i < resultf.length; i++) {
-              console.log(i);
-              listef.push(resultf[i]["values"][0][0])
+  }
 
-
-          }
-          console.log(listef);
-
-          return listef
-      });
+  function createDuo() {
+      console.log(createDuo())
 
   }
 
