@@ -20,6 +20,57 @@
 
         <div id="chart_div"></div>
 
+        <section id=i ntro>
+
+            <section class="img">
+                <h2 id="titled">Maps</h2> <br><br>
+                <div class="buttons">
+                    <button id="zoom-in">+</button>
+                    <button id="zoom-out">- </button>
+                    <button id="reset">Reset</button>
+                </div>
+                <div class="parent">
+                    <div class="panzoom" id="panzoom-element">
+                        <img class="maps" src="image/MAP_OF_WALLS_AOTV.png">
+                    </div>
+                </div>
+
+                <script>
+                    const elem = document.getElementById('panzoom-element');
+                    const zoomInButton = document.getElementById('zoom-in');
+                    const zoomOutButton = document.getElementById('zoom-out');
+                    const resetButton = document.getElementById('reset');
+                    const panzoom = Panzoom(elem);
+                    const parent = elem.parentElement
+                        // No function bind needed
+                    parent.addEventListener('wheel', panzoom.zoomWithWheel);
+                    zoomInButton.addEventListener('click', panzoom.zoomIn)
+                    zoomOutButton.addEventListener('click', panzoom.zoomOut)
+                    resetButton.addEventListener('click', panzoom.reset)
+                </script>
+            </section>
+
+
+
+
+            <br><br><br><br><br><br>
+            <p class="text" style="color: brown;font-size: 12px;">This site is made by an amateur and is constantly changing if you have any accountability (some responsive beug) problem:<br> <a href='https://discord.gg/BNRa7Uj'>Click here</a></p>
+            <br><br><br><br><br><br>
+            <br>
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+
         <script src="app.js"></script>
         <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()">
         </script>
