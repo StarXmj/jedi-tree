@@ -184,9 +184,9 @@
 
           }
           var f = []
-          for (var j = 0; i < liste3.length; i++) {
-              for (var m = 0; m < liste3[i].length; m++) {
-                  f.push([liste3[i][0], name[i]])
+          for (var j = 0; j < liste3.length; j++) {
+              for (var m = 0; m < liste3[j].length; m++) {
+                  f.push([liste3[j][m], name[j]])
 
 
 
