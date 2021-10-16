@@ -168,7 +168,7 @@
           console.log(value_5);
           var liste = [];
 
-          for (var k = 0; k < name.length; i++) {
+          for (var k = 0; k < name.length; k++) {
               liste.push([name[k], master[k]])
 
           }
