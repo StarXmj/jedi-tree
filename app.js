@@ -164,13 +164,14 @@
               return getCell("g").then((value) => {
                   var padawan = value
                   console.log(value);
-                  liste = [name, master, padawan]
-                  return liste
 
 
+
+                  return [name, master, padawan]
               });
 
           });
+
       });
 
 
