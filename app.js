@@ -185,11 +185,7 @@
 
 
           // For each orgchart box, provide the name, manager, and tooltip to show.
-          data.addRows([
-
-              ['yyy', 'Jim'],
-              ['Carol', 'Bob']
-          ]);
+          data.addRows(liste);
 
           // Create the chart.
           var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
