@@ -146,7 +146,7 @@
 
 
               }
-              // console.log(liste
+              // console.log(listef
 
               return listef
           });
@@ -155,8 +155,24 @@
   }
 
   async function createDuo() {
-      const promise2 = getCell("b").then(successCallback, failureCallback);
-      console.log(promise2)
+
+      return getCell("b").then((value) => {
+          var name = value
+          return getCell("d").then((value) => {
+              var master = value
+              console.log(value);
+              return getCell("g").then((value) => {
+                  var padawan = value
+                  console.log(value);
+                  liste = [name, master, padawan]
+
+
+              });
+
+          });
+      });
+
+
 
 
   }
