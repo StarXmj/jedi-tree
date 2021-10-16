@@ -165,6 +165,7 @@
                   var padawan = value
                   console.log(value);
                   liste = [name, master, padawan]
+                  console.log(liste)
 
 
               });
