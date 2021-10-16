@@ -16,202 +16,54 @@
         function random(min, max) {
             return Math.random() * (max - min) + min;
         }
-        const data = [
-            [
-                "pololemon",
-                "AnimatedEcrux"
-            ],
-            [
-                "GatoMorningStar",
-                "Felixen8"
-            ],
-            [
-                "JSC",
-                "Unite5000"
-            ],
-            [
-                "Blazey_Kitsune",
-                "reyrosky"
-            ],
-            [
-                "JamesEcrux",
-                "Eoldor"
-            ],
-            [
-                "Unite5000",
-                "Nuggetonio"
-            ],
-            [
-                "CromNokseri",
-                "PhaseSpectr"
-            ],
-            [
-                "LidaMorningstar",
-                "ArchiveGreeterCannon"
-            ],
-            [
-                "JSC",
-                "BookMaster77"
-            ],
-            [
-                "AnimatedEcrux",
-                "Kdakaka231"
-            ],
-            [
-                "AnimatedEcrux",
-                " FrivolousArch"
-            ],
-            [
-                "AnimatedEcrux",
-                " FrivolousAlamo"
-            ],
-            [
-                "Felixen8",
-                "HotrodZilla20"
-            ],
-            [
-                "Felixen8",
-                "MistfulGlee"
-            ],
-            [
-                "Felixen8",
-                "LyCranos"
-            ],
-            [
-                "Felixen8",
-                "HeavyOverjoyash1234"
-            ],
-            [
-                "Felixen8",
-                "bon20025"
-            ],
-            [
-                "Unite5000",
-                "Goldenfox70"
-            ],
-            [
-                "Unite5000",
-                "\nBLOOXXED"
-            ],
-            [
-                "Unite5000",
-                "\nToni598923"
-            ],
-            [
-                "Unite5000",
-                "\nVagtil"
-            ],
-            [
-                "Unite5000",
-                "\nGarriik"
-            ],
-            [
-                "Unite5000",
-                "\nVeIixy"
-            ],
-            [
-                "Unite5000",
-                "\nNuggetonio"
-            ],
-            [
-                "Unite5000",
-                "\nUsherblue7"
-            ],
-            [
-                "Unite5000",
-                "\nvJesko "
-            ],
-            [
-                "Unite5000",
-                "\nJohn_Tailor"
-            ],
-            [
-                "Unite5000",
-                "\nMega_Pekka_1121"
-            ],
-            [
-                "Unite5000",
-                "\nkadimzx "
-            ],
-            [
-                "Unite5000",
-                "\ndrFrostxl"
-            ],
-            [
-                "Unite5000",
-                "\nKing_DarkMarcosBR"
-            ],
-            [
-                "Unite5000",
-                "\nAntarctic_Gaming\n"
-            ],
-            [
-                "reyrosky",
-                "Foxtrot2332 "
-            ],
-            [
-                "reyrosky",
-                " micaahh"
-            ],
-            [
-                "Eoldor",
-                "Anitaanil"
-            ],
-            [
-                "Eoldor",
-                " Harpelix"
-            ],
-            [
-                "Eoldor",
-                " Skaxon "
-            ],
-            [
-                "Nuggetonio",
-                "ADAMOS_001 "
-            ],
-            [
-                "PhaseSpectr",
-                "Vulpology"
-            ],
-            [
-                "PhaseSpectr",
-                " Braydenbode "
-            ],
-            [
-                "PhaseSpectr",
-                "OliverVulpes"
-            ],
-            [
-                "PhaseSpectr",
-                "GalacticLemonFTW "
-            ],
-            [
-                "ArchiveGreeterCannon",
-                "ThreatHorizon"
-            ],
-            [
-                "BookMaster77",
-                "ioipoker "
-            ]
+        var padawan = [
+            "AnimatedEcrux",
+            "Felixen8",
+            "Unite5000",
+            "reyrosky",
+            "Eoldor",
+            "Nuggetonio",
+            "PhaseSpectr",
+            "ArchiveGreeterCannon",
+            "BookMaster77"
         ]
-        var liste = []
+        var master = [
+            "pololemon",
+            "GatoMorningStar",
+            "JSC",
+            "Blazey_Kitsune",
+            "JamesEcrux",
+            "Unite5000",
+            "CromNokseri",
+            "LidaMorningstar",
+            "JSC"
+        ]
+
+        var f = new Array;
         var nb = 0
-        for (var i = 0; i < data.length; i++) {
+        for (var i = 0; i < master.length; i++) {
+            var liste = []
+            liste.push(padawan[i])
+            f.push({
+                master: master[i],
+                padawans: liste
+            })
 
-            for (var j = 1; j > 0; j--) {
-                var masternb = nb + 1
+            for (var j = 0; j < master.length; j++) {
+                if (master[i] == master[j]) {
 
-                liste.push({
-                    id: nb,
-                    pid: nb,
-                    name: data[i][j],
-
-                })
-
+                    f[0]["padawans"].push(padawan[j])
+                    master.splice(j, j)
+                }
 
             }
+
+
         }
-        console.log(liste)
+
+
+
+        console.log(f, (typeof f))
         var chart = new OrgChart(document.getElementById("orgchart"), {
             nodeBinding: {
                 field_0: "name",
@@ -234,7 +86,7 @@
                 pid: 3,
                 name: "a",
 
-            }]
+            }],
         });
     </script>
 

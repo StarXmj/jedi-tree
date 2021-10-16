@@ -139,6 +139,7 @@
           }).then((response) => {
               var result = response.result;
               var resultf = result.valueRanges;
+              console.log(resultf)
               listef = []
               for (var i = 0; i < resultf.length; i++) {
                   // console.log(i);
