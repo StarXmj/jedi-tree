@@ -177,8 +177,9 @@
           for (var i = 0; i < name.length; i++) {
               for (var j = 0; j < padawan[i].split(",").length - 1; j++) {
                   liste2.push([padawan[i].split(',')[j]])
+                  liste3.push(liste2)
               }
-              liste3.push(liste2)
+
           }
 
           console.log(liste3)
