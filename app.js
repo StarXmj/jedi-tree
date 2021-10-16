@@ -155,10 +155,9 @@
   }
 
   async function createDuo() {
-      return getCell("b").then((value) => {
-          console.log(value);
+      const promise2 = getCell("b").then(successCallback, failureCallback);
+      console.log(promise2)
 
-      });
 
   }
 
