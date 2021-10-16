@@ -12,9 +12,20 @@
 
     <body>
         <style>
+            #accueil {
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                background-color: #f5f5f5;
+            }
+            
             #chart_div {
-                display: block;
-                width: 100vw;
+                position: relative;
+                width: 100%;
+                height: 400px;
+                padding-top: 125px;
+                padding-bottom: 125px;
                 text-align: center;
                 background-color: #ededed;
             }
@@ -27,8 +38,10 @@
         <button id="signout_button" style="display: none;">Sign Out</button>
 
         <pre id="content" style="white-space: pre-wrap;"></pre>
+        <div id=accueil>
+            <div id="chart_div"></div>
+        </div>
 
-        <div id="chart_div"></div>
 
 
 
