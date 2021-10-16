@@ -172,6 +172,11 @@
               liste.push([name[k], master[k]])
 
           }
+
+          for (var i = 0; i < name.length; i++) {
+              liste.push([padawan[i], name[i]])
+
+          }
           console.log(liste)
 
 
