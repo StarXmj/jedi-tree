@@ -177,7 +177,7 @@
   google.charts.setOnLoadCallback(drawChart);
 
   async function drawChart() {
-      createDuo().then(async(value) => {
+      createDuo().then((value) => {
           console.log(value)
 
       })
