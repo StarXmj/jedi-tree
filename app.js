@@ -170,7 +170,7 @@
 
           for (var k = 0; k < name.length; k++) {
               liste.push([master[k],
-                  [name[k]]
+                  name[k]
               ])
 
           }
@@ -189,7 +189,7 @@
           for (var j = 0; j < liste3.length; j++) {
               for (var m = 0; m < liste3[j].length; m++) {
                   liste.push([name[j],
-                      [liste3[j][m]]
+                      liste3[j][m]
                   ])
 
 
