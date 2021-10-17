@@ -164,51 +164,51 @@
       google.charts.setOnLoadCallback(drawChart);
 
       return getCell("b").then(async(value) => {
-              var name = value
-              console.log(name)
-              const value_3 = await getCell("d");
-              var master = value_3;
-              console.log(value_3);
-              const value_5 = await getCell("g");
-              var padawan = value_5;
-              console.log(value_5);
-              var liste = [];
+          var name = value
+          console.log(name)
+          const value_3 = await getCell("d");
+          var master = value_3;
+          console.log(value_3);
+          const value_5 = await getCell("g");
+          var padawan = value_5;
+          console.log(value_5);
+          var liste = [];
 
-              for (var k = 0; k < name.length; k++) {
-                  liste.push([master[k], name[k]])
+          for (var k = 0; k < name.length; k++) {
+              liste.push([master[k], name[k]])
+          }
+          var liste3 = []
+          for (var i = 0; i < padawan.length; i++) {
+              liste3.push(padawan[i].split(','))
+          }
+
+          for (var j = 0; j < liste3.length; j++) {
+              for (var m = 0; m < liste3[j].length; m++) {
+                  liste.push([name[j], liste3[j][m]])
               }
-              var liste3 = []
-              for (var i = 0; i < padawan.length; i++) {
-                  liste3.push(padawan[i].split(','))
-              }
+          }
+          var fl = []
+          var alm = 0
+          var alp = 0
+          for (var l = 0; l < liste.length; i++) {
 
-              for (var j = 0; j < liste3.length; j++) {
-                  for (var m = 0; m < liste3[j].length; m++) {
-                      liste.push([name[j], liste3[j][m]])
-                  }
-              }
-              var fl = []
-              var alm = 0
-              var alp = 0
-              for (var l = 0; l < liste.length; i++) {
-
-                  alm = 0 + 1
+              alm = 0 + 1
 
 
-                  fl.push([liste[l][n], alm, 0])
-                  alp = alm
+              fl.push([liste[l][n], alm, 0])
+              alp = alm
 
-                  fl.push([liste[l][n + 1], alm + 1, alp])
+              fl.push([liste[l][n + 1], alm + 1, alp])
 
 
 
 
 
+          }
 
 
 
-
-                  console.log(fl)
+          console.log(fl)
 
 
 
@@ -216,29 +216,29 @@
 
 
 
-                  var data = new google.visualization.DataTable();
-                  data.addColumn('string', 'Name');
-                  data.addColumn('string', 'Manager');
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'Name');
+          data.addColumn('string', 'Manager');
 
 
-                  // For each orgchart box, provide the name, manager, and tooltip to show.
-                  data.addRows(liste);
+          // For each orgchart box, provide the name, manager, and tooltip to show.
+          data.addRows(liste);
 
-                  // Create the chart.
-                  var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
-                  // Draw the chart, setting the allowHtml option to true for the tooltips.
-                  chart.draw(data, { 'allowHtml': true });
-                  //return [name, master, padawan];
+          // Create the chart.
+          var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+          // Draw the chart, setting the allowHtml option to true for the tooltips.
+          chart.draw(data, { 'allowHtml': true });
+          //return [name, master, padawan];
 
-              });
-
-
-
-
-      }
+      });
 
 
 
-      async function drawChart() {
 
-      }
+  }
+
+
+
+  async function drawChart() {
+
+  }
