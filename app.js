@@ -227,9 +227,9 @@
           var grandf = []
           for (var g = 0; g < nombrel.length - 1; g++) {
               grandf.push({
-                  id: nombrel[1],
-                  pid: nombrel[2],
-                  name: nombrel[0]
+                  id: nombrel[g][1],
+                  pid: nombrel[g][2],
+                  name: nombrel[g][0]
 
               })
           }
