@@ -203,13 +203,10 @@
           for (var v = 1; v < uniqueArr.length + 1; v++) {
               nombrel.push([uniqueArr[v], v])
           }
-          var obj = new Object()
+          var obj = {}
           for (var v = 1; v < uniqueArr.length + 1; v++) {
+              obj[uniqueArr[v]] = v;
 
-              obj.assign({
-                  [uniqueArr[v]]: v
-
-              })
           }
 
           console.log(obj[["Unite5000"]], obj)
