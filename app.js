@@ -199,10 +199,12 @@
               }
           }
           var uniqueArr = [...new Set(all)]
+          var nombrel = []
+          for (var v = 1; v < uniqueArr.length; v++) {
+              nombrel.push([uniqueArr[v], v])
+          }
 
-
-
-          console.log(uniqueArr)
+          console.log(uniqueArr, nombrel)
 
 
 
