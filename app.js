@@ -210,9 +210,9 @@
           var open = []
           for (var l = 0; l < fl.length; l++) {
               open.push({
-                  id: open[l][1],
-                  pid: open[l][2],
-                  name: open[l][0],
+                  id: fl[l][1],
+                  pid: fl[l][2],
+                  name: fl[l][0],
               })
           }
 
