@@ -160,8 +160,6 @@
   }
 
   async function createDuo() {
-      google.charts.load('current', { packages: ["orgchart"] });
-      google.charts.setOnLoadCallback(drawChart);
 
       return getCell("b").then(async(value) => {
           var name = value
