@@ -164,7 +164,7 @@
 
 
 
-  async function createDuo() {
+  function createDuo() {
 
       return getCell("b").then(async(value) => {
           var name = value
@@ -228,12 +228,12 @@
               }
           }
 
-          fetch("https://api.roblox.com/users/get-by-username?username=StarXmj")
-              .then(response => response.json()
-                  .then(reponse2 => console.log(reponse2)))
+          $.getJSON('https://api.wheretheiss.at/v1/satellites/25544', function(data) {
+              var lat = data['latitude'];
+              console.log(lat)
 
+          });
           console.log(uniqueArr, nombrel)
-
           var grandf = []
           for (var g = 0; g < nombrel.length; g++) {
               grandf.push({
