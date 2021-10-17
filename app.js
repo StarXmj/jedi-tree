@@ -170,6 +170,12 @@
           const value_5 = await getCell("g");
           var padawan = value_5;
           console.log(value_5);
+          var pm = name
+          for (var p = 0; p < padawan.length; p++) {
+              pm.push(padawan[p])
+
+          }
+
           var liste = [];
 
           for (var k = 0; k < name.length; k++) {
@@ -185,7 +191,7 @@
                   liste.push([name[j], liste3[j][m]])
               }
           }
-          var all = []
+          var all = pm
           for (var l = 0; l < liste3.length; l++) {
               for (var n = 0; n < liste3[l].length; n++) {
                   all.push(liste3[l][n])
