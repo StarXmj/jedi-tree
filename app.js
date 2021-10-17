@@ -228,8 +228,8 @@
               }
           }
 
-          $.getJSON('https://api.roblox.com/users/get-by-username?username=Inobservatus', function(data) {
-              var lat = data['Id'];
+          $.getJSON('https://api.wheretheiss.at/v1/satellites/25544', function(data) {
+              var lat = data['latitude'];
               console.log(lat)
 
 
