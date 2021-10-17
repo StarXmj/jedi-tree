@@ -200,11 +200,11 @@
           }
           var uniqueArr = [...new Set(all)]
           var nombrel = []
-          for (var v = 1; v < uniqueArr.length + 1; v++) {
+          for (var v = 0; v < uniqueArr.length; v++) {
               nombrel.push([uniqueArr[v], v])
           }
           var obj = {}
-          for (var v = 1; v < uniqueArr.length + 1; v++) {
+          for (var v = 0; v < uniqueArr.length; v++) {
               obj[uniqueArr[v]] = v;
 
           }
