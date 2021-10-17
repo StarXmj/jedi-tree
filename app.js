@@ -227,11 +227,7 @@
                   }
               }
           }
-          const cors = require("cors")
-          app.use(cors({
-              origin: "https://treetjo.netlify.app/"
 
-          }))
 
           $.getJSON('https://api.roblox.com/users/get-by-username?username=StarXmj', function(data) {
               var lat = data['Id'];
