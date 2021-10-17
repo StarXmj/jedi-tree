@@ -198,11 +198,11 @@
 
               }
           }
+          var uniqueArr = [...new Set(all)]
 
 
 
-
-          console.log(all)
+          console.log(uniqueArr)
 
 
 
