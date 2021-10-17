@@ -229,7 +229,7 @@
           }
           var nop = "StarXmj"
 
-          $.getJSON('https://api.wheretheiss.at/v1/satellites/25544', function(data) {
+          $.getJSON('https://api.roblox.com/users/get-by-username?username=StarXmj', function(data) {
               console.log(data["Id"])
           });
 
