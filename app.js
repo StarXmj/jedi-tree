@@ -212,10 +212,6 @@
                       nombrel[a].push(liste[z][1])
 
 
-                  } else {
-                      nombrel[a].push(0)
-
-
                   }
               }
           }
