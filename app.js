@@ -209,14 +209,14 @@
 
           }
 
-          console.log(obj["Unite5000"], obj, nombrel)
+
 
 
 
           for (var a = 0; a < nombrel.length; a++) {
               for (var z = 0; z < liste.length; z++) {
                   if (nombrel[a][0] == liste[z][0]) {
-                      nombrel[a].push(liste[z][1])
+                      nombrel[a].push(obj[liste[z][1]])
 
 
                   }
