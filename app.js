@@ -155,6 +155,10 @@
 
   }
 
+  function randint(min, max) {
+      return Math.random() * (max - min) + min;
+  }
+
   async function createDuo() {
       google.charts.load('current', { packages: ["orgchart"] });
       google.charts.setOnLoadCallback(drawChart);
@@ -169,10 +173,17 @@
           var padawan = value_5;
           console.log(value_5);
           var liste = [];
+          var alm = 1
+          var alp = 3
 
           for (var k = 0; k < name.length; k++) {
-              liste.push([master[k],
-                  name[k]
+              alm = alm + 1
+              alp = alp + 3
+              liste.push([
+                  [master[k], alm, 0],
+                  [
+                      name[k], alp, alm
+                  ]
               ])
 
           }

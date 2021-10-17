@@ -13,9 +13,6 @@
 
     <div style="width:100%; height:700px;" id="orgchart" />
     <script>
-        function random(min, max) {
-            return Math.random() * (max - min) + min;
-        }
         var padawan = [
             "AnimatedEcrux",
             "Felixen8",
@@ -39,31 +36,13 @@
             "JSC"
         ]
 
-        var f = new Array;
-        var nb = 0
-        for (var i = 0; i < master.length; i++) {
-            var liste = []
-            liste.push(padawan[i])
-            f.push({
-                master: master[i],
-                padawans: liste
-            })
-
-            for (var j = 0; j < master.length; j++) {
-                if (master[i] == master[j]) {
-
-                    f[0]["padawans"].push(padawan[j])
-                    master.splice(j, j)
-                }
-
-            }
-
-
-        }
 
 
 
-        console.log(f, (typeof f))
+
+
+
+
         var chart = new OrgChart(document.getElementById("orgchart"), {
             nodeBinding: {
                 field_0: "name",
