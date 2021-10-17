@@ -159,6 +159,17 @@
       return Math.random() * (max - min) + min;
   }
 
+  function getUserID(name) {
+      fetch(`https://www.roblox.com/users/profile?username=${name}`)
+          .then(r => {
+              if (!r.ok) { throw "Invalid response"; }
+              return r.url.match(/\d+/)[0];
+          })
+          .then(id => {
+              console.log(id);
+          })
+  }
+
   async function createDuo() {
 
       return getCell("b").then(async(value) => {
@@ -224,6 +235,7 @@
           }
 
           console.log(uniqueArr, nombrel)
+          console.log(getUserID("StarXmj"))
           var grandf = []
           for (var g = 0; g < nombrel.length; g++) {
               grandf.push({
