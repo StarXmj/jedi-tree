@@ -198,9 +198,9 @@
 
               fl.push([liste[l][n], alm, 0])
               alp = alm
-
-              fl.push([liste[l][n + 1], alm + 1, alp])
               alm = alm + 1
+              fl.push([liste[l][n + 1], alm, alp])
+
 
 
 
