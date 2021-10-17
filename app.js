@@ -179,7 +179,7 @@
           var liste = [];
 
           for (var k = 0; k < name.length; k++) {
-              liste.push([master[k], name[k]])
+              liste.push([name[k], master[k]])
           }
           var liste3 = []
           for (var i = 0; i < padawan.length; i++) {
@@ -188,7 +188,7 @@
 
           for (var j = 0; j < liste3.length; j++) {
               for (var m = 0; m < liste3[j].length; m++) {
-                  liste.push([name[j], liste3[j][m]])
+                  liste.push([liste3[j][m], name[j]])
               }
           }
           var all = pm
@@ -200,8 +200,23 @@
           }
           var uniqueArr = [...new Set(all)]
           var nombrel = []
-          for (var v = 1; v < uniqueArr.length; v++) {
+          for (var v = 1; v < uniqueArr.length + 1; v++) {
               nombrel.push([uniqueArr[v], v])
+          }
+          for (var z = 0; z < nombrel.length; z++) {
+
+
+              for (var a = 0; a < nombrel.length; a++) {
+                  if (nombrel[a][0] == liste[z][0]) {
+                      nombrel[a].push(liste[z][1])
+
+
+                  } else {
+                      nombrel[a].push(0)
+
+
+                  }
+              }
           }
 
           console.log(uniqueArr, nombrel)
