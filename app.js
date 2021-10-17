@@ -230,9 +230,11 @@
 
           $.getJSON('https://api.wheretheiss.at/v1/satellites/25544', function(data) {
               var lat = data['latitude'];
-              console.log(lat)
+              return lat
+
 
           });
+          console.log(lat)
           console.log(uniqueArr, nombrel)
           var grandf = []
           for (var g = 0; g < nombrel.length; g++) {
