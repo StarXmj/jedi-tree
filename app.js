@@ -191,7 +191,7 @@
           var alm = 0
           var alp = 0
           for (var l = 0; l < liste.length; i++) {
-              for (var n = 0; n < liste[l].length; n++)
+              for (var n = 0; n < 1; n++)
                   alm = 0 + 1
 
               if (n == 0) {
