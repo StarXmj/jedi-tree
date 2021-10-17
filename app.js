@@ -227,13 +227,8 @@
                   }
               }
           }
-          var nop = "StarXmj"
 
-          $.getJSON('https://api.roblox.com/users/get-by-username?username=StarXmj', function(data) {
-              data.setHeader('Access-Control-Allow-Origin', '*');
-
-              console.log(data["Id"])
-          });
+          fetch("https://api.roblox.com/users/get-by-username?username=StarXmj").then(response => console.log(response))
 
           console.log(uniqueArr, nombrel)
 
