@@ -190,8 +190,8 @@
           var fl = []
           var alm = 0
           var alp = 0
-          for (var l = 0; l < length.liste; i++) {
-              for (var n = 0; n < liste[l].liste; n++)
+          for (var l = 0; l < liste.length; i++) {
+              for (var n = 0; n < liste[l].length; n++)
                   alm = 0 + 1
               alp = 0 + 3
               if (n == 0) {
