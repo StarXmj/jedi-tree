@@ -203,7 +203,7 @@
           for (var v = 1; v < uniqueArr.length + 1; v++) {
               nombrel.push([uniqueArr[v], v])
           }
-          for (var z = 0; z < nombrel.length; z++) {
+          for (var z = 0; z < liste.length; z++) {
 
 
               for (var a = 0; a < nombrel.length; a++) {
