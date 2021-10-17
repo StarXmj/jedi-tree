@@ -171,8 +171,8 @@
           var padawan = value_5;
           console.log(value_5);
           var pm = name
-          for (var p = 0; p < padawan.length; p++) {
-              pm.push(padawan[p])
+          for (var p = 0; p < master.length; p++) {
+              pm.push(master[p])
 
           }
 
