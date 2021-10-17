@@ -230,11 +230,12 @@
 
           $.getJSON('https://api.roblox.com/users/get-by-username?username=Inobservatus', function(data) {
               var lat = data['Id'];
+              console.log(lat)
 
 
 
           });
-          console.log(lat)
+
           console.log(uniqueArr, nombrel)
           var grandf = []
           for (var g = 0; g < nombrel.length; g++) {
