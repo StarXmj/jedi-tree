@@ -203,7 +203,7 @@
           for (var v = 1; v < uniqueArr.length + 1; v++) {
               nombrel.push([uniqueArr[v], v])
           }
-          var obj = []
+          var obj = new Object()
           for (var v = 1; v < uniqueArr.length + 1; v++) {
 
               obj.assign({
