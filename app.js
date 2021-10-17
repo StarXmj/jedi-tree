@@ -212,7 +212,7 @@
               })
           }
 
-          console.log()
+          console.log(obj)
 
 
 
