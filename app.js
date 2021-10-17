@@ -185,41 +185,12 @@
                   liste.push([name[j], liste3[j][m]])
               }
           }
-          var fl = []
-          var alm = 1
-          var alp = 0
-
-          for (var l = 0; l < liste.length; l++) {
-              var n = 0
-              alm = alm + 1
-
-
-
-
-              fl.push([liste[l][n], alm, 0])
-              alp = alm
-              alm = alm + 1
-              fl.push([liste[l][n + 1], alm, alp])
 
 
 
 
 
-          }
-
-          var open = []
-          for (var l = 0; l < fl.length; l++) {
-              open.push({
-                  id: fl[l][1],
-                  pid: fl[l][2],
-                  name: fl[l][0],
-              })
-          }
-
-
-
-
-          console.log(fl)
+          console.log(liste3)
 
 
 
