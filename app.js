@@ -193,11 +193,11 @@
 
           for (var l = 0; l < liste.length; l++) {
               var n = 0
-              alm = alp + 1
+              alm = alm + 1
 
 
-              fl.push([liste[l][n], alm, 0])
-              alp = alm
+              fl.push([liste[l][n], alm + 1, 0])
+              alp = alm + 1
 
               fl.push([liste[l][n + 1], alm + 1, alp])
 
