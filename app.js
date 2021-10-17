@@ -159,12 +159,10 @@
       return Math.random() * (max - min) + min;
   }
 
-  function getUserID(name) {
-      return $.getJSON('https://api.roblox.com/users/get-by-username?username=' + name, function(data) {
 
-          returndata['ID']
-      })
-  }
+
+
+
 
   async function createDuo() {
 
@@ -229,6 +227,16 @@
                   }
               }
           }
+          var nop = "StarXmj"
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', 'https://api.roblox.com/users/get-by-username?username=' + nop);
+          xhr.onreadystatechange = function() {
+              if (xhr.readyState === 4) {
+
+                  console.log(xhr.responseText)
+              }
+          };
+          xhr.send();
 
           console.log(uniqueArr, nombrel)
           console.log(getUserID("StarXmj"))
