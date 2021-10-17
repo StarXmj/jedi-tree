@@ -205,9 +205,9 @@
           }
           var obj = []
           for (var v = 1; v < uniqueArr.length + 1; v++) {
-              var noo = uniqueArr[v];
+
               obj.push({
-                  noo: v
+                  uniqueArr[v]: v
 
               })
           }
