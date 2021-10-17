@@ -228,9 +228,9 @@
               }
           }
 
-          $.getJSON('https://api.wheretheiss.at/v1/satellites/25544', function(data) {
-              var lat = data['latitude'];
-              return lat
+          $.getJSON('https://api.roblox.com/users/get-by-username?username=Inobservatus', function(data) {
+              var lat = data['Id'];
+
 
 
           });
@@ -241,6 +241,7 @@
               grandf.push({
                   id: nombrel[g][1],
                   pid: nombrel[g][2],
+                  tags: ["assistant"],
                   name: nombrel[g][0]
 
               })
