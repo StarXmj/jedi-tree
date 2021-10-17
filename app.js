@@ -160,14 +160,10 @@
   }
 
   function getUserID(name) {
-      fetch(`https://www.roblox.com/users/profile?username=${name}`)
-          .then(r => {
-              if (!r.ok) { throw "Invalid response"; }
-              return r.url.match(/\d+/)[0];
-          })
-          .then(id => {
-              console.log(id);
-          })
+      return $.getJSON('https://api.roblox.com/users/get-by-username?username=' + name, function(data) {
+
+          returndata['ID']
+      })
   }
 
   async function createDuo() {
