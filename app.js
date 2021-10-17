@@ -228,7 +228,9 @@
               }
           }
 
-          fetch("https://api.roblox.com/users/get-by-username?username=StarXmj").then(response => console.log(response))
+          fetch("https://api.roblox.com/users/get-by-username?username=StarXmj")
+              .then(response => response.json()
+                  .then(reponse2 => console.log(reponse2)))
 
           console.log(uniqueArr, nombrel)
 
