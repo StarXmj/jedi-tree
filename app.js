@@ -193,6 +193,8 @@
 
           for (var l = 0; l < liste.length; l++) {
               var n = 0
+              alm = alm + 1
+
 
 
 
