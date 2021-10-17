@@ -185,7 +185,13 @@
                   liste.push([name[j], liste3[j][m]])
               }
           }
+          var all = []
+          for (var l = 0; l < liste3.length; l++) {
+              for (var n = 0; n < liste3[l].length; n++) {
+                  all.push(liste3[l][n])
 
+              }
+          }
 
 
 
