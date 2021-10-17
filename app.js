@@ -228,18 +228,13 @@
               }
           }
           var nop = "StarXmj"
-          var xhr = new XMLHttpRequest();
-          xhr.open('GET', 'https://api.roblox.com/users/get-by-username?username=' + nop);
-          xhr.onreadystatechange = function() {
-              if (xhr.readyState === 4) {
 
-                  console.log(xhr.responseText)
-              }
-          };
-          xhr.send();
+          $.getJSON('https://api.wheretheiss.at/v1/satellites/25544', function(data) {
+              console.log(data["Id"])
+          });
 
           console.log(uniqueArr, nombrel)
-          console.log(getUserID("StarXmj"))
+
           var grandf = []
           for (var g = 0; g < nombrel.length; g++) {
               grandf.push({
