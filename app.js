@@ -225,7 +225,7 @@
 
           console.log(uniqueArr, nombrel)
           var grandf = []
-          for (var g = 0; g < nombrel.length - 1; g++) {
+          for (var g = 0; g < nombrel.length; g++) {
               grandf.push({
                   id: nombrel[g][1],
                   pid: nombrel[g][2],
