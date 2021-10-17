@@ -193,9 +193,10 @@
           for (var l = 0; l < liste.length; i++) {
               for (var n = 0; n < liste[l].length; n++)
                   alm = 0 + 1
-              alp = 0 + 3
+
               if (n == 0) {
                   fl.push([liste[l][n], alm, 0])
+                  alp = alm
               } else {
                   fl.push([liste[l][n], alm, alp])
 
@@ -207,7 +208,7 @@
 
 
 
-          console.log("hh  " + fl)
+          console.log(fl)
 
 
 
