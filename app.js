@@ -230,6 +230,7 @@
 
 
           $.getJSON('https://api.roblox.com/users/get-by-username?username=StarXmj', function(data) {
+              data.setHeader('Access-Control-Allow-Origin')
               var lat = data['Id'];
               console.log(lat)
 
