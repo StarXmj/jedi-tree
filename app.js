@@ -203,6 +203,16 @@
           for (var v = 1; v < uniqueArr.length + 1; v++) {
               nombrel.push([uniqueArr[v], v])
           }
+          var obj = []
+          for (var v = 1; v < uniqueArr.length + 1; v++) {
+              var noo = uniqueArr[v];
+              obj.push({
+                  noo: v
+
+              })
+          }
+
+          console.log()
 
 
 
