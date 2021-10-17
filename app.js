@@ -206,13 +206,13 @@
           var obj = []
           for (var v = 1; v < uniqueArr.length + 1; v++) {
 
-              obj.push({
+              obj.assign({
                   [uniqueArr[v]]: v
 
               })
           }
 
-          console.log(obj[0]["Unite5000"], obj)
+          console.log(obj[["Unite5000"]], obj)
 
 
 
