@@ -188,19 +188,19 @@
               }
           }
           var fl = []
-          var alm = 0
+          var alm = 1
           var alp = 0
 
           for (var l = 0; l < liste.length; l++) {
               var n = 0
-              alm = alm + 1
 
 
-              fl.push([liste[l][n], alm + 1, 0])
-              alp = alm + 1
+
+              fl.push([liste[l][n], alm, 0])
+              alp = alm
 
               fl.push([liste[l][n + 1], alm + 1, alp])
-
+              alm = alm + 1
 
 
 
