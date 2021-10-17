@@ -207,7 +207,7 @@
           for (var v = 1; v < uniqueArr.length + 1; v++) {
 
               obj.push({
-                  uniqueArr[v]: v
+                  [uniqueArr[v]]: v
 
               })
           }
