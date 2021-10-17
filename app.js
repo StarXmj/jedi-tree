@@ -173,51 +173,41 @@
           var padawan = value_5;
           console.log(value_5);
           var liste = [];
-          var alm = 1
-          var alp = 3
 
           for (var k = 0; k < name.length; k++) {
-              alm = alm + 1
-              alp = alp + 3
-              liste.push([
-                  [master[k], alm, 0],
-                  [
-                      name[k], alp, alm
-                  ]
-              ])
-
+              liste.push([master[k], name[k]])
           }
           var liste3 = []
-
-
-
           for (var i = 0; i < padawan.length; i++) {
-
-
               liste3.push(padawan[i].split(','))
-
-
           }
 
           for (var j = 0; j < liste3.length; j++) {
               for (var m = 0; m < liste3[j].length; m++) {
-                  liste.push([name[j],
-                      liste3[j][m]
-                  ])
-
-
-
-
-
+                  liste.push([name[j], liste3[j][m]])
+              }
+          }
+          var fl = []
+          var alm = 0
+          var alp = 0
+          for (var l = 0; l < length.liste; i++) {
+              for (var n = 0; n < liste[l].liste; n++)
+                  alm = 0 + 1
+              alp = 0 + 3
+              if (l == 0) {
+                  fl.push([liste[l][n], alm, 0])
+              } else {
+                  fl.push([liste[l][n], alm, alp])
 
               }
+
+
+
           }
 
 
 
-
-
-          console.log(liste)
+          console.log(fl)
 
 
 
