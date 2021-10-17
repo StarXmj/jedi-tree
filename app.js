@@ -194,7 +194,7 @@
               for (var n = 0; n < liste[l].liste; n++)
                   alm = 0 + 1
               alp = 0 + 3
-              if (l == 0) {
+              if (n == 0) {
                   fl.push([liste[l][n], alm, 0])
               } else {
                   fl.push([liste[l][n], alm, alp])
