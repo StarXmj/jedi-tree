@@ -209,6 +209,16 @@
 
           }
 
+          var open = []
+          for (var l = 0; l < fl.length; l++) {
+              open.push({
+                  id: open[l][1],
+                  pid: open[l][2],
+                  name: open[l][0],
+              })
+          }
+
+
 
 
           console.log(fl)
@@ -218,30 +228,18 @@
 
 
 
+          var chart = new OrgChart(document.getElementById("orgchart"), {
+              nodeBinding: {
+                  field_0: "name",
 
-          var data = new google.visualization.DataTable();
-          data.addColumn('string', 'Name');
-          data.addColumn('string', 'Manager');
-
-
-          // For each orgchart box, provide the name, manager, and tooltip to show.
-          data.addRows(liste);
-
-          // Create the chart.
-          var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
-          // Draw the chart, setting the allowHtml option to true for the tooltips.
-          chart.draw(data, { 'allowHtml': true });
-          //return [name, master, padawan];
+                  // img_0: "img"
+              },
+              nodes: open,
+          });
 
       });
 
 
 
-
-  }
-
-
-
-  async function drawChart() {
 
   }
