@@ -165,6 +165,14 @@
 
 
   function createDuo() {
+      $.getJSON('https://api.roblox.com/users/get-by-username?username=StarXmj', function(data) {
+
+          var lat = data['Id'];
+          console.log(lat)
+
+
+
+      });
 
       return getCell("b").then(async(value) => {
           var name = value
@@ -229,14 +237,7 @@
           }
 
 
-          $.getJSON('https://api.roblox.com/users/get-by-username?username=StarXmj', function(data) {
-              data.setHeader('Access-Control-Allow-Origin', '*')
-              var lat = data['Id'];
-              console.log(lat)
 
-
-
-          });
 
           console.log(uniqueArr, nombrel)
           var grandf = []
