@@ -246,6 +246,13 @@
           });
 
           console.log(uniqueArr, nombrel)
+          for (var t = 0; t < nombrel.length; t++) {
+              if (nombrel[t][0] == "0") {
+                  nombrel.splice(t, 1)
+              }
+
+
+          }
           var grandf = []
           for (var g = 0; g < nombrel.length; g++) {
               grandf.push({
