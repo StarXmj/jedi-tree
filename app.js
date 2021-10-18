@@ -258,7 +258,7 @@
               grandf.push({
                   id: nombrel[g][1],
                   pid: nombrel[g][2],
-                  tags: ["assistant"],
+                  link: "https://www.roblox.com/users/profile?username=" + nombrel[g][0],
                   name: nombrel[g][0],
                   img: "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" + nombrel[g][0]
 
@@ -274,6 +274,7 @@
               template: "diva",
               nodeBinding: {
                   field_0: "name",
+                  field_1: "link",
                   img_0: "img"
 
                   // img_0: "img"
