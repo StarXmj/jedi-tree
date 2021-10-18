@@ -255,14 +255,25 @@
           }
           var grandf = []
           for (var g = 0; g < nombrel.length; g++) {
-              grandf.push({
-                  id: nombrel[g][1],
-                  pid: nombrel[g][2],
-                  link: "https://www.roblox.com/users/profile?username=" + nombrel[g][0],
-                  name: nombrel[g][0],
-                  img: "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" + nombrel[g][0]
+              if (nombrel[g][0] == "JSC") {
+                  grandf.push({
+                      id: nombrel[g][1],
+                      pid: nombrel[g][2],
+                      link: "https://www.roblox.com/groups/11243601/TJO-Jedi-Service-Corps#!/about",
+                      name: nombrel[g][0],
+                      img: "https://t3.rbxcdn.com/cd8dea65fc250f69341b21ea7215891a"
+                  })
 
-              })
+              } else {
+                  grandf.push({
+                      id: nombrel[g][1],
+                      pid: nombrel[g][2],
+                      link: "https://www.roblox.com/users/profile?username=" + nombrel[g][0],
+                      name: nombrel[g][0],
+                      img: "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" + nombrel[g][0]
+
+                  })
+              }
           }
 
 
