@@ -282,7 +282,7 @@
 
 
           var chart = new OrgChart(document.getElementById("orgchart"), {
-
+              template: "diva",
               nodeBinding: {
                   field_0: "name",
                   Link: "link",
