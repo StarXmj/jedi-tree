@@ -143,7 +143,7 @@
               listef = []
               for (var i = 0; i < resultf.length; i++) {
                   // console.log(i);
-                  if (resultf[i]["values"][0][0] !== 0) {
+                  if (resultf[i]["values"][0][0] !== '0') {
                       listef.push(resultf[i]["values"][0][0])
                   }
 
