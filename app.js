@@ -274,7 +274,7 @@
               template: "diva",
               nodeBinding: {
                   field_0: "name",
-                  field_1: "link",
+                  Link: "link",
                   img_0: "img"
 
                   // img_0: "img"
