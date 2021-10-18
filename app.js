@@ -259,7 +259,8 @@
                   id: nombrel[g][1],
                   pid: nombrel[g][2],
                   tags: ["assistant"],
-                  name: nombrel[g][0]
+                  name: nombrel[g][0],
+                  img: "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" + nombrel[g][0]
 
               })
           }
@@ -272,6 +273,7 @@
           var chart = new OrgChart(document.getElementById("orgchart"), {
               nodeBinding: {
                   field_0: "name",
+                  img_0: "img"
 
                   // img_0: "img"
               },
