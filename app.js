@@ -145,9 +145,10 @@
                   // console.log(i);
                   if (resultf[i]["values"] !== undefined) {
                       listef.push(resultf[i]["values"][0][0])
-                  }
+                  } else {
+                      listef.push(0)
 
-                  console.log(i)
+                  }
 
 
 
